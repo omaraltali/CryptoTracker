@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF0FC0A82C017B670077E0E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF0FC0A72C017B670077E0E8 /* Assets.xcassets */; };
 		DFAE537F2C01718E003C5D6C /* CryptoTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAE537E2C01718E003C5D6C /* CryptoTrackerApp.swift */; };
 		DFAE53812C01718E003C5D6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAE53802C01718E003C5D6C /* ContentView.swift */; };
-		DFAE53832C01718F003C5D6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFAE53822C01718F003C5D6C /* Assets.xcassets */; };
 		DFAE53862C01718F003C5D6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFAE53852C01718F003C5D6C /* Preview Assets.xcassets */; };
 		DFAE53902C017190003C5D6C /* CryptoTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAE538F2C017190003C5D6C /* CryptoTrackerTests.swift */; };
 /* End PBXBuildFile section */
@@ -25,10 +25,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF0FC0A72C017B670077E0E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/Resources/Assets.xcassets; sourceTree = "<group>"; };
 		DFAE537B2C01718E003C5D6C /* CryptoTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFAE537E2C01718E003C5D6C /* CryptoTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTrackerApp.swift; sourceTree = "<group>"; };
 		DFAE53802C01718E003C5D6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		DFAE53822C01718F003C5D6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFAE53852C01718F003C5D6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DFAE538B2C017190003C5D6C /* CryptoTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFAE538F2C017190003C5D6C /* CryptoTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTrackerTests.swift; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 			children = (
 				DFAE537E2C01718E003C5D6C /* CryptoTrackerApp.swift */,
 				DFAE53802C01718E003C5D6C /* ContentView.swift */,
-				DFAE53822C01718F003C5D6C /* Assets.xcassets */,
+				DF0FC0A72C017B670077E0E8 /* Assets.xcassets */,
 				DFAE53842C01718F003C5D6C /* Preview Content */,
 			);
 			path = CryptoTracker;
@@ -179,7 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFAE53862C01718F003C5D6C /* Preview Assets.xcassets in Resources */,
-				DFAE53832C01718F003C5D6C /* Assets.xcassets in Resources */,
+				DF0FC0A82C017B670077E0E8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
