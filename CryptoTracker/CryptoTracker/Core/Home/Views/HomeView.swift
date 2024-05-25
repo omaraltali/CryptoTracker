@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
 
+    @EnvironmentObject private var viewModel: HomeViewModel
     @State private var showProtfolio: Bool = false
 
     var body: some View {
@@ -16,16 +17,26 @@ struct HomeView: View {
             Color.theme.background.ignoresSafeArea()
             VStack {
                 homeHeader
+
+                List {
+                    CoinRawView(coin: DeveloperPreview.instance.coin, showHoldingsColoumn: false)
+                }
+                .listStyle(.plain)
+
+
                 Spacer(minLength: 0)
             }
         }
     }
 }
 
-#Preview {
-    NavigationView {
-        HomeView()
-            .navigationBarHidden(true)
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            HomeView()
+                .navigationBarHidden(true)
+        }
+        .environmentObject(dev.homeViewModel)
     }
 }
 
