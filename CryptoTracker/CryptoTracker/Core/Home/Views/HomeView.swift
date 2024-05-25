@@ -14,8 +14,6 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             Color.theme.background.ignoresSafeArea()
-
-            // content
             VStack {
                 homeHeader
                 Spacer(minLength: 0)
