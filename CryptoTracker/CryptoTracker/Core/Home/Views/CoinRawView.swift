@@ -16,6 +16,8 @@ struct CoinRawView: View {
     }
 }
 
-#Preview {
-    CoinRawView()
+struct CoinRawView_Previews: PreviewProvider {
+    static var previews: some View {
+        CoinRawView(coin: dev.coin)
+    }
 }
