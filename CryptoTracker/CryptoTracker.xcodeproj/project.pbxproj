@@ -13,6 +13,8 @@
 		DF0FC0B52C0180160077E0E8 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC0B42C0180160077E0E8 /* CircleButtonView.swift */; };
 		DF0FC0B72C018DEE0077E0E8 /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC0B62C018DEE0077E0E8 /* CircleButtonAnimationView.swift */; };
 		DF0FC0BA2C0222A10077E0E8 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC0B92C0222A10077E0E8 /* CoinModel.swift */; };
+		DF0FC0BC2C0227CA0077E0E8 /* CoinRawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC0BB2C0227CA0077E0E8 /* CoinRawView.swift */; };
+		DF0FC0BE2C02282F0077E0E8 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC0BD2C02282F0077E0E8 /* PreviewProvider.swift */; };
 		DFAE537F2C01718E003C5D6C /* CryptoTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAE537E2C01718E003C5D6C /* CryptoTrackerApp.swift */; };
 		DFAE53862C01718F003C5D6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFAE53852C01718F003C5D6C /* Preview Assets.xcassets */; };
 		DFAE53902C017190003C5D6C /* CryptoTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAE538F2C017190003C5D6C /* CryptoTrackerTests.swift */; };
@@ -35,6 +37,8 @@
 		DF0FC0B42C0180160077E0E8 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		DF0FC0B62C018DEE0077E0E8 /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
 		DF0FC0B92C0222A10077E0E8 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		DF0FC0BB2C0227CA0077E0E8 /* CoinRawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRawView.swift; sourceTree = "<group>"; };
+		DF0FC0BD2C02282F0077E0E8 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		DFAE537B2C01718E003C5D6C /* CryptoTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFAE537E2C01718E003C5D6C /* CryptoTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTrackerApp.swift; sourceTree = "<group>"; };
 		DFAE53852C01718F003C5D6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -64,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				DF0FC0AA2C017C040077E0E8 /* Color.swift */,
+				DF0FC0BD2C02282F0077E0E8 /* PreviewProvider.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				DF0FC0B02C017E450077E0E8 /* HomeView.swift */,
+				DF0FC0BB2C0227CA0077E0E8 /* CoinRawView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -278,6 +284,8 @@
 				DF0FC0B72C018DEE0077E0E8 /* CircleButtonAnimationView.swift in Sources */,
 				DF0FC0B52C0180160077E0E8 /* CircleButtonView.swift in Sources */,
 				DF0FC0BA2C0222A10077E0E8 /* CoinModel.swift in Sources */,
+				DF0FC0BE2C02282F0077E0E8 /* PreviewProvider.swift in Sources */,
+				DF0FC0BC2C0227CA0077E0E8 /* CoinRawView.swift in Sources */,
 				DF0FC0AB2C017C040077E0E8 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
