@@ -20,9 +20,10 @@
 		DF0FC0C52C0251860077E0E8 /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC0C42C0251860077E0E8 /* CoinDataService.swift */; };
 		DFA4DD482C0A6410004DB1D5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA4DD472C0A6410004DB1D5 /* NetworkManager.swift */; };
 		DFA4DD4A2C0A650A004DB1D5 /* NetworkManagerProtcol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA4DD492C0A650A004DB1D5 /* NetworkManagerProtcol.swift */; };
+		DFA4DD4C2C0A6C2F004DB1D5 /* MOCKS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA4DD4B2C0A6C2F004DB1D5 /* MOCKS.swift */; };
+		DFA4DD4E2C0A6D7F004DB1D5 /* CoinDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA4DD4D2C0A6D7F004DB1D5 /* CoinDataServiceTests.swift */; };
 		DFAE537F2C01718E003C5D6C /* CryptoTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAE537E2C01718E003C5D6C /* CryptoTrackerApp.swift */; };
 		DFAE53862C01718F003C5D6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFAE53852C01718F003C5D6C /* Preview Assets.xcassets */; };
-		DFAE53902C017190003C5D6C /* CryptoTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAE538F2C017190003C5D6C /* CryptoTrackerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,11 +50,12 @@
 		DF0FC0C42C0251860077E0E8 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
 		DFA4DD472C0A6410004DB1D5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		DFA4DD492C0A650A004DB1D5 /* NetworkManagerProtcol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtcol.swift; sourceTree = "<group>"; };
+		DFA4DD4B2C0A6C2F004DB1D5 /* MOCKS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOCKS.swift; sourceTree = "<group>"; };
+		DFA4DD4D2C0A6D7F004DB1D5 /* CoinDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataServiceTests.swift; sourceTree = "<group>"; };
 		DFAE537B2C01718E003C5D6C /* CryptoTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFAE537E2C01718E003C5D6C /* CryptoTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTrackerApp.swift; sourceTree = "<group>"; };
 		DFAE53852C01718F003C5D6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DFAE538B2C017190003C5D6C /* CryptoTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFAE538F2C017190003C5D6C /* CryptoTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTrackerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,7 +207,8 @@
 		DFAE538E2C017190003C5D6C /* CryptoTrackerTests */ = {
 			isa = PBXGroup;
 			children = (
-				DFAE538F2C017190003C5D6C /* CryptoTrackerTests.swift */,
+				DFA4DD4B2C0A6C2F004DB1D5 /* MOCKS.swift */,
+				DFA4DD4D2C0A6D7F004DB1D5 /* CoinDataServiceTests.swift */,
 			);
 			path = CryptoTrackerTests;
 			sourceTree = "<group>";
@@ -330,7 +333,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFAE53902C017190003C5D6C /* CryptoTrackerTests.swift in Sources */,
+				DFA4DD4E2C0A6D7F004DB1D5 /* CoinDataServiceTests.swift in Sources */,
+				DFA4DD4C2C0A6C2F004DB1D5 /* MOCKS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
