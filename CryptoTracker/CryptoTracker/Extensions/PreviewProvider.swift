@@ -20,7 +20,7 @@ class DeveloperPreview {
     static let instance = DeveloperPreview()
     private init() { }
 
-    let homeViewModel = HomeViewModel()
+    let homeViewModel = CompositionRoot.createHomeViewModel()
 
 
     let coin = CoinModel(
