@@ -10,8 +10,8 @@ import SwiftUI
 @main
 struct CryptoTrackerApp: App {
 
-    @StateObject private var homeViewModel = HomeViewModel()
-    
+    @StateObject private var homeViewModel = CompositionRoot().createHomeViewModel()
+
     var body: some Scene {
         WindowGroup {
             NavigationView {
@@ -20,5 +20,13 @@ struct CryptoTrackerApp: App {
             }
             .environmentObject(homeViewModel)
         }
+    }
+}
+
+class CompositionRoot {
+    func createHomeViewModel() -> HomeViewModel {
+        let networkManager = NetworkManager()
+        let dataService = CoinDataService(networkManager: networkManager)
+        return HomeViewModel(dataService: dataService)
     }
 }
