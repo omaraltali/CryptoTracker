@@ -42,6 +42,27 @@ final class CoinDataServiceTests: XCTestCase {
 
         wait(for: [expectation], timeout: 1.0)
     }
+
+    func testGetCoinsFailure() {
+        let error = URLError(.badServerResponse)
+        let fetchDataResult = Fail<[CoinModel], Error>(error: error).eraseToAnyPublisher()
+
+        let dataService = makeSUT(fetchDataResult: fetchDataResult)
+
+        let expectation = XCTestExpectation(description: "Error is handled")
+        dataService.$allCoins
+            .sink { receivedCoins in
+                XCTAssertTrue(receivedCoins.isEmpty)
+                expectation.fulfill()
+            }
+            .store(in: &cancellables)
+
+        wait(for: [expectation], timeout: 1.0)
+    }
+
+
+    // MARK: Helpers
+
     private func makeSUT(fetchDataResult: AnyPublisher<[CoinModel], Error>) -> CoinDataService {
         let mockNetworkManager = MockNetworkManager()
         mockNetworkManager.fetchDataResult = fetchDataResult
