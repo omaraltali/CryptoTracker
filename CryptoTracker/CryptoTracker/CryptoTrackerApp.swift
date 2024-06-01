@@ -27,6 +27,7 @@ class CompositionRoot {
     static func createHomeViewModel() -> HomeViewModel {
         let networkManager = NetworkManager()
         let dataService = CoinDataService(networkManager: networkManager)
-        return HomeViewModel(dataService: dataService)
+        let marketDataService = MarketDataService(networkManager: networkManager)
+        return HomeViewModel(dataService: dataService, marketDataService: marketDataService)
     }
 }
