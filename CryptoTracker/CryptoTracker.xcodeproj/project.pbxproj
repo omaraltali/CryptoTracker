@@ -28,6 +28,8 @@
 		DFA4DD5D2C0ACB1F004DB1D5 /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA4DD5C2C0ACB1F004DB1D5 /* StatisticModel.swift */; };
 		DFA4DD5F2C0ACBB4004DB1D5 /* StatsisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA4DD5E2C0ACBB4004DB1D5 /* StatsisticView.swift */; };
 		DFA4DD612C0B5BD6004DB1D5 /* HomeStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA4DD602C0B5BD6004DB1D5 /* HomeStatsView.swift */; };
+		DFA4DD632C0B5F5A004DB1D5 /* MarketDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA4DD622C0B5F5A004DB1D5 /* MarketDataModel.swift */; };
+		DFA4DD652C0B6059004DB1D5 /* MarketDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA4DD642C0B6059004DB1D5 /* MarketDataService.swift */; };
 		DFAE537F2C01718E003C5D6C /* CryptoTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAE537E2C01718E003C5D6C /* CryptoTrackerApp.swift */; };
 		DFAE53862C01718F003C5D6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFAE53852C01718F003C5D6C /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -63,6 +65,8 @@
 		DFA4DD5C2C0ACB1F004DB1D5 /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
 		DFA4DD5E2C0ACBB4004DB1D5 /* StatsisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsisticView.swift; sourceTree = "<group>"; };
 		DFA4DD602C0B5BD6004DB1D5 /* HomeStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsView.swift; sourceTree = "<group>"; };
+		DFA4DD622C0B5F5A004DB1D5 /* MarketDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataModel.swift; sourceTree = "<group>"; };
+		DFA4DD642C0B6059004DB1D5 /* MarketDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataService.swift; sourceTree = "<group>"; };
 		DFAE537B2C01718E003C5D6C /* CryptoTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFAE537E2C01718E003C5D6C /* CryptoTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTrackerApp.swift; sourceTree = "<group>"; };
 		DFAE53852C01718F003C5D6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 			children = (
 				DF0FC0B92C0222A10077E0E8 /* CoinModel.swift */,
 				DFA4DD5C2C0ACB1F004DB1D5 /* StatisticModel.swift */,
+				DFA4DD622C0B5F5A004DB1D5 /* MarketDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				DF0FC0C42C0251860077E0E8 /* CoinDataService.swift */,
+				DFA4DD642C0B6059004DB1D5 /* MarketDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 				DFAE537F2C01718E003C5D6C /* CryptoTrackerApp.swift in Sources */,
 				DFA4DD5B2C0AC077004DB1D5 /* UIApplication.swift in Sources */,
 				DF0FC0B72C018DEE0077E0E8 /* CircleButtonAnimationView.swift in Sources */,
+				DFA4DD652C0B6059004DB1D5 /* MarketDataService.swift in Sources */,
 				DF0FC0C22C0241AA0077E0E8 /* HomeViewModel.swift in Sources */,
 				DF0FC0B52C0180160077E0E8 /* CircleButtonView.swift in Sources */,
 				DFA4DD4A2C0A650A004DB1D5 /* NetworkManagerProtcol.swift in Sources */,
@@ -359,6 +366,7 @@
 				DF0FC0BC2C0227CA0077E0E8 /* CoinRawView.swift in Sources */,
 				DFA4DD592C0AB9C9004DB1D5 /* SearchBarView.swift in Sources */,
 				DFA4DD5F2C0ACBB4004DB1D5 /* StatsisticView.swift in Sources */,
+				DFA4DD632C0B5F5A004DB1D5 /* MarketDataModel.swift in Sources */,
 				DF0FC0C02C022BAC0077E0E8 /* Double.swift in Sources */,
 				DF0FC0AB2C017C040077E0E8 /* Color.swift in Sources */,
 				DF0FC0C52C0251860077E0E8 /* CoinDataService.swift in Sources */,
