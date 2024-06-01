@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct CoinRawView: View {
 
@@ -36,21 +37,21 @@ struct CoinRawView_Previews: PreviewProvider {
 extension CoinRawView {
 
     private var leftColumn: some View {
-        HStack(spacing: 0){
+        HStack(spacing: 0) {
             Text("\(coin.rank)")
                 .font(.caption)
                 .foregroundColor(Color.theme.secondaryText)
                 .frame(minWidth: 30)
-            Circle()
+            KFImage(URL(string: coin.image))
+                .resizable()
+                .scaledToFit()
                 .frame(width: 30, height: 30)
             Text(coin.symbol.uppercased())
                 .font(.headline)
                 .padding(.leading, 6)
                 .foregroundColor(Color.theme.accent)
         }
-
     }
-
     private var centerColumn: some View {
         VStack(alignment: .trailing) {
             Text(coin.currentHoldingsValue.asCurrencyWith2Decimals())
