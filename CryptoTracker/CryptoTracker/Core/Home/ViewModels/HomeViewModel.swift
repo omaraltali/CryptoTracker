@@ -32,13 +32,11 @@ class HomeViewModel: ObservableObject {
 //            }
 //            .store(in: &cancellables)
 
-
-
-
         // Subscribe to seachText :
         // and make the searchText also subscribe to data service $allCoins using combineLatest
         $searchText
             .combineLatest(dataService.$allCoins)
+            .debounce(for: .milliseconds(300), scheduler: RunLoop.main)
             .map { text, initialCoins -> [CoinModel] in
                 guard !text.isEmpty else {
                     return initialCoins
