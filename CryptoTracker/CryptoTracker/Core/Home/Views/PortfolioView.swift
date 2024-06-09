@@ -126,6 +126,13 @@ extension PortfolioView {
         withAnimation(.easeIn) {
             showCheckMark = true
         }
+
+        UIApplication.shared.endEditing()
+    }
+
+    private func removeSelectedCoin() {
+        selectedCoin = nil
+        viewModel.searchText = ""
     }
 }
 
