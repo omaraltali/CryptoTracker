@@ -118,6 +118,15 @@ extension PortfolioView {
         }
     }
 
+    private func saveButtonPressed() {
+        guard let coin = selectedCoin else { return }
+
+        // perform saving
+
+        withAnimation(.easeIn) {
+            showCheckMark = true
+        }
+    }
 }
 
 struct PortfolioView_Previews: PreviewProvider {
