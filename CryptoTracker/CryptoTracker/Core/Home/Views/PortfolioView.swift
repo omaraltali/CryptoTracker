@@ -10,6 +10,8 @@ import SwiftUI
 struct PortfolioView: View {
     @EnvironmentObject private var viewModel: HomeViewModel
     @State private var selectedCoin: CoinModel? = nil
+    @State private var quiantityText: String = ""
+    @State private var showCheckMark: Bool = false
     @Binding var isPresented: Bool
 
     var body: some View {
@@ -18,12 +20,17 @@ struct PortfolioView: View {
                 VStack(alignment: .leading, spacing: 0) {
                     SearchBarView(searchText: $viewModel.searchText)
                     coinLogoList
-
+                    if selectedCoin != nil {
+                        portfolioInputSection
+                    }
                 }
                 .navigationTitle("Edit Portfolio")
                 .toolbar(content: {
                     ToolbarItem(placement: .topBarLeading) {
                         XMarkButton(isPresented: $isPresented)
+                    }
+                    ToolbarItem(placement: .topBarTrailing) {
+                        trailingNavBarButtons
                     }
                 })
             }
@@ -59,6 +66,58 @@ extension PortfolioView {
             .padding(.leading)
         }
     }
+
+    private var portfolioInputSection: some View {
+        VStack(spacing: 20) {
+            HStack {
+                Text("Current price of \(selectedCoin?.symbol.uppercased() ?? ""):")
+                Spacer()
+                Text(selectedCoin?.currentPrice.asCurrencyWith6Decimals() ?? "")
+            }
+            Divider()
+            HStack {
+                Text("Amount holding:")
+                Spacer()
+                TextField("Ex: 1.5", text: $quiantityText)
+                    .multilineTextAlignment(.trailing)
+                    .keyboardType(.decimalPad)
+            }
+            Divider()
+            HStack {
+                Text("Current Value:")
+                Spacer()
+                Text(getCurrentValue().asCurrencyWith2Decimals())
+            }
+        }
+        .font(.headline)
+        .padding()
+
+    }
+
+    private var trailingNavBarButtons: some View {
+        HStack(spacing: 10) {
+            Image(systemName: "checkmark")
+                .opacity(showCheckMark ? 1.0 : 0.0)
+            Button(action: {
+
+            }, label: {
+                Text("Save".uppercased())
+            })
+            .opacity( (selectedCoin != nil && selectedCoin?.currentHoldings != Double(quiantityText)) ? 1.0 : 0.0
+            )
+        }
+        .font(.headline)
+
+    }
+
+    private func getCurrentValue() -> Double {
+        if let quiantity = Double(quiantityText) {
+            return quiantity * (selectedCoin?.currentPrice ?? 0)
+        } else {
+          return  0
+        }
+    }
+
 }
 
 struct PortfolioView_Previews: PreviewProvider {
