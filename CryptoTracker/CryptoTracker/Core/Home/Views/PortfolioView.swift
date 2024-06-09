@@ -128,6 +128,12 @@ extension PortfolioView {
         }
 
         UIApplication.shared.endEditing()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            withAnimation(.easeOut) {
+                showCheckMark = false
+            }
+        }
     }
 
     private func removeSelectedCoin() {
