@@ -12,6 +12,11 @@ struct CryptoTrackerApp: App {
 
     @StateObject private var homeViewModel = CompositionRoot.createHomeViewModel()
 
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color.theme.accent)]
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(Color.theme.accent)]
+    }
+
     var body: some Scene {
         WindowGroup {
             NavigationView {
