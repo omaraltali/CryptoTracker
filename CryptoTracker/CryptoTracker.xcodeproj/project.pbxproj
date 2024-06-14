@@ -35,6 +35,7 @@
 		DFA4DD672C0B7135004DB1D5 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA4DD662C0B7135004DB1D5 /* PortfolioView.swift */; };
 		DFAE537F2C01718E003C5D6C /* CryptoTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAE537E2C01718E003C5D6C /* CryptoTrackerApp.swift */; };
 		DFAE53862C01718F003C5D6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFAE53852C01718F003C5D6C /* Preview Assets.xcassets */; };
+		DFE9E10C2C1C7C2900278D1C /* PortfolioContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DFE9E10A2C1C7C2800278D1C /* PortfolioContainer.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		DFAE537E2C01718E003C5D6C /* CryptoTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTrackerApp.swift; sourceTree = "<group>"; };
 		DFAE53852C01718F003C5D6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DFAE538B2C017190003C5D6C /* CryptoTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE9E10B2C1C7C2900278D1C /* PortfolioContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PortfolioContainer.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				DF0FC0B92C0222A10077E0E8 /* CoinModel.swift */,
 				DFA4DD5C2C0ACB1F004DB1D5 /* StatisticModel.swift */,
 				DFA4DD622C0B5F5A004DB1D5 /* MarketDataModel.swift */,
+				DFE9E10A2C1C7C2800278D1C /* PortfolioContainer.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,7 +183,8 @@
 		DF0FC0C32C02515B0077E0E8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				DFE9E1082C1C7AEF00278D1C /* NetworkManager */,
+				DFE9E1092C1C7BE600278D1C /* CoreData */,
+				DFE9E1082C1C7AEF00278D1C /* Network */,
 				DFA4DD462C0A63F7004DB1D5 /* Services */,
 			);
 			path = Services;
@@ -252,13 +256,20 @@
 			path = CryptoTrackerTests;
 			sourceTree = "<group>";
 		};
-		DFE9E1082C1C7AEF00278D1C /* NetworkManager */ = {
+		DFE9E1082C1C7AEF00278D1C /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				DFA4DD472C0A6410004DB1D5 /* NetworkManager.swift */,
 				DFA4DD492C0A650A004DB1D5 /* NetworkManagerProtcol.swift */,
 			);
-			path = NetworkManager;
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DFE9E1092C1C7BE600278D1C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +386,7 @@
 				DF0FC0B72C018DEE0077E0E8 /* CircleButtonAnimationView.swift in Sources */,
 				DF8718B42C12849F00790CBF /* XMarkButton.swift in Sources */,
 				DFA4DD652C0B6059004DB1D5 /* MarketDataService.swift in Sources */,
+				DFE9E10C2C1C7C2900278D1C /* PortfolioContainer.xcdatamodeld in Sources */,
 				DF0FC0C22C0241AA0077E0E8 /* HomeViewModel.swift in Sources */,
 				DF0FC0B52C0180160077E0E8 /* CircleButtonView.swift in Sources */,
 				DFA4DD4A2C0A650A004DB1D5 /* NetworkManagerProtcol.swift in Sources */,
@@ -684,6 +696,20 @@
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		DFE9E10A2C1C7C2800278D1C /* PortfolioContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DFE9E10B2C1C7C2900278D1C /* PortfolioContainer.xcdatamodel */,
+			);
+			currentVersion = DFE9E10B2C1C7C2900278D1C /* PortfolioContainer.xcdatamodel */;
+			name = PortfolioContainer.xcdatamodeld;
+			path = /Users/omaraltali/Desktop/CryptoTracker/CryptoTracker/CryptoTracker/Models/PortfolioContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DFAE53732C01718E003C5D6C /* Project object */;
 }
