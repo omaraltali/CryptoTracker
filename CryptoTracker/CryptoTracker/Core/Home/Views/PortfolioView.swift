@@ -34,6 +34,11 @@ struct PortfolioView: View {
                     }
                 })
             }
+            .onChange(of: viewModel.searchText) {
+                if viewModel.searchText == "" {
+                    removeSelectedCoin()
+                }
+            }
         }
     }
 }
@@ -139,6 +144,7 @@ extension PortfolioView {
     private func removeSelectedCoin() {
         selectedCoin = nil
         viewModel.searchText = ""
+        quiantityText = ""
     }
 }
 
