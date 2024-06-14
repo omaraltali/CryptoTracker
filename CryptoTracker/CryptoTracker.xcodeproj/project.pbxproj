@@ -36,6 +36,7 @@
 		DFAE537F2C01718E003C5D6C /* CryptoTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAE537E2C01718E003C5D6C /* CryptoTrackerApp.swift */; };
 		DFAE53862C01718F003C5D6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFAE53852C01718F003C5D6C /* Preview Assets.xcassets */; };
 		DFE9E10C2C1C7C2900278D1C /* PortfolioContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DFE9E10A2C1C7C2800278D1C /* PortfolioContainer.xcdatamodeld */; };
+		DFE9E10E2C1C886A00278D1C /* PortfolioDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE9E10D2C1C886A00278D1C /* PortfolioDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		DFAE53852C01718F003C5D6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DFAE538B2C017190003C5D6C /* CryptoTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE9E10B2C1C7C2900278D1C /* PortfolioContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PortfolioContainer.xcdatamodel; sourceTree = "<group>"; };
+		DFE9E10D2C1C886A00278D1C /* PortfolioDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 			children = (
 				DF0FC0C42C0251860077E0E8 /* CoinDataService.swift */,
 				DFA4DD642C0B6059004DB1D5 /* MarketDataService.swift */,
+				DFE9E10D2C1C886A00278D1C /* PortfolioDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				DFA4DD5D2C0ACB1F004DB1D5 /* StatisticModel.swift in Sources */,
 				DF0FC0BA2C0222A10077E0E8 /* CoinModel.swift in Sources */,
 				DF0FC0BE2C02282F0077E0E8 /* PreviewProvider.swift in Sources */,
+				DFE9E10E2C1C886A00278D1C /* PortfolioDataService.swift in Sources */,
 				DFA4DD612C0B5BD6004DB1D5 /* HomeStatsView.swift in Sources */,
 				DF0FC0BC2C0227CA0077E0E8 /* CoinRawView.swift in Sources */,
 				DFA4DD592C0AB9C9004DB1D5 /* SearchBarView.swift in Sources */,
