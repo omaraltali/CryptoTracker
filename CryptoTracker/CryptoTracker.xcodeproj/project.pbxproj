@@ -177,14 +177,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		DF0FC0C32C02515B0077E0E8 /* Network */ = {
+		DF0FC0C32C02515B0077E0E8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				DFA4DD492C0A650A004DB1D5 /* NetworkManagerProtcol.swift */,
-				DFA4DD472C0A6410004DB1D5 /* NetworkManager.swift */,
+				DFE9E1082C1C7AEF00278D1C /* NetworkManager */,
 				DFA4DD462C0A63F7004DB1D5 /* Services */,
 			);
-			path = Network;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		DFA4DD462C0A63F7004DB1D5 /* Services */ = {
@@ -227,7 +226,7 @@
 			children = (
 				DFAE537E2C01718E003C5D6C /* CryptoTrackerApp.swift */,
 				DF0FC0A92C017BEA0077E0E8 /* Extensions */,
-				DF0FC0C32C02515B0077E0E8 /* Network */,
+				DF0FC0C32C02515B0077E0E8 /* Services */,
 				DF0FC0B82C02227B0077E0E8 /* Models */,
 				DF0FC0AC2C017E090077E0E8 /* Core */,
 				DF0FC0A72C017B670077E0E8 /* Assets.xcassets */,
@@ -251,6 +250,15 @@
 				DFA4DD4D2C0A6D7F004DB1D5 /* CoinDataServiceTests.swift */,
 			);
 			path = CryptoTrackerTests;
+			sourceTree = "<group>";
+		};
+		DFE9E1082C1C7AEF00278D1C /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				DFA4DD472C0A6410004DB1D5 /* NetworkManager.swift */,
+				DFA4DD492C0A650A004DB1D5 /* NetworkManagerProtcol.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
