@@ -33,6 +33,7 @@ class CompositionRoot {
         let networkManager = NetworkManager()
         let dataService = CoinDataService(networkManager: networkManager)
         let marketDataService = MarketDataService(networkManager: networkManager)
-        return HomeViewModel(dataService: dataService, marketDataService: marketDataService)
+        let portfolioDataService = PortfolioDataService()
+        return HomeViewModel(dataService: dataService, marketDataService: marketDataService, portfolioDataService: portfolioDataService)
     }
 }
