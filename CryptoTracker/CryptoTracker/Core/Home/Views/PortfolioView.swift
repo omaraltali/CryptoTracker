@@ -55,7 +55,7 @@ extension PortfolioView {
                         .padding(5)
                         .onTapGesture {
                             withAnimation(.easeIn) {
-                                selectedCoin = coin
+                                updateSelectedCoin(coin: coin)
                             }
                         }
                         .background(
@@ -145,6 +145,17 @@ extension PortfolioView {
         selectedCoin = nil
         viewModel.searchText = ""
         quiantityText = ""
+    }
+
+    private func updateSelectedCoin(coin: CoinModel) {
+        selectedCoin = coin
+        if let portofolioCoin = viewModel.portfolioCoins.first(where: {$0.id == coin.id}),let amount = portofolioCoin.currentHoldings  {
+            quiantityText = "\(amount)"
+        } else {
+            quiantityText = ""
+        }
+
+
     }
 }
 
