@@ -55,6 +55,7 @@ class PortfolioDataService {
         let entity = Portfolio(context: container.viewContext)
         entity.coinID = coin.id
         entity.amount = amount
+        applyChanges()
     }
 
     private func update(entity: Portfolio, amount: Double) {
