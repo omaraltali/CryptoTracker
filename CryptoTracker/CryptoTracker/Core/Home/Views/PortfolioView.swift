@@ -124,9 +124,9 @@ extension PortfolioView {
     }
 
     private func saveButtonPressed() {
-        guard let coin = selectedCoin else { return }
+        guard let coin = selectedCoin, let amount = Double(quiantityText) else { return }
 
-        // perform saving
+        viewModel.updatePortfolio(coin: coin, amount: amount)
 
         withAnimation(.easeIn) {
             showCheckMark = true
