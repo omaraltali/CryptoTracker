@@ -102,6 +102,10 @@ class HomeViewModel: ObservableObject {
         return [marketCap, volume, btcDominance, portfolio]
     }
 
+    func reloadData() {
+        coinDataService.getCoins()
+    }
+
 
 
 

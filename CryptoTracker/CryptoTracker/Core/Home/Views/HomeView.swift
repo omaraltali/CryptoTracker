@@ -112,6 +112,9 @@ extension HomeView {
             }
         }
         .listStyle(.plain)
+        .refreshable {
+            viewModel.reloadData()
+        }
 
     }
 
@@ -123,6 +126,9 @@ extension HomeView {
             }
         }
         .listStyle(.plain)
+        .refreshable {
+            viewModel.reloadData()
+        }
     }
 
 
