@@ -123,6 +123,7 @@ class HomeViewModel: ObservableObject {
 
     func reloadData() {
         coinDataService.getCoins()
+        marketDataService.getMarketData()
     }
 
 
