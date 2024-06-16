@@ -29,11 +29,18 @@ struct CryptoTrackerApp: App {
 }
 
 class CompositionRoot {
+
+   static let networkManager = NetworkManager()
+
     static func createHomeViewModel() -> HomeViewModel {
-        let networkManager = NetworkManager()
         let dataService = CoinDataService(networkManager: networkManager)
         let marketDataService = MarketDataService(networkManager: networkManager)
         let portfolioDataService = PortfolioDataService()
         return HomeViewModel(dataService: dataService, marketDataService: marketDataService, portfolioDataService: portfolioDataService)
+    }
+
+    static func createDetailViewModel(for coin: CoinModel) -> DetailViewModel {
+        let coinDetailService = CoinDetailDataService(networkManager: networkManager, coin: coin)
+        return DetailViewModel(coin: coin, coinDetailService: coinDetailService)
     }
 }
