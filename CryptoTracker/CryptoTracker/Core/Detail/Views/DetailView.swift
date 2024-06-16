@@ -9,15 +9,15 @@ import SwiftUI
 
 struct DetailView: View {
 
-    let coin: CoinModel
+    @ObservedObject var viewModel: DetailViewModel
 
     var body: some View {
-        Text(coin.name)
+        Text(viewModel.coin.name)
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(coin: dev.coin)
+        DetailView(viewModel: CompositionRoot.createDetailViewModel(for: dev.coin))
     }
 }
