@@ -110,10 +110,15 @@ extension HomeView {
     private var allCoinsList: some View {
         List {
             ForEach(viewModel.allCoins) { coin in
-                NavigationLink(destination: DetailView(coin: coin)) {
+                NavigationLink(value: coin) {
+                    EmptyView()
+                }
+                .opacity(0)
+                .listRowInsets(EdgeInsets())
+                .background(
                     CoinRawView(coin: coin, showHoldingsColoumn: false)
                         .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
-                }
+                )
             }
         }
         .listStyle(.plain)
