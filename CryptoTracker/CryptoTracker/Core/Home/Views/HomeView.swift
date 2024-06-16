@@ -42,6 +42,9 @@ struct HomeView: View {
                 Spacer(minLength: 0)
             }
         }
+        .navigationDestination(for: CoinModel.self) { coin in
+            DetailView(coin: coin)
+        }
     }
 }
 
