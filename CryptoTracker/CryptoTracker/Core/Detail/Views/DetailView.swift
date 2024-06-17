@@ -32,6 +32,18 @@ struct DetailView: View {
             }
         }
         .navigationTitle(viewModel.coin.name)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                HStack {
+                    Text(viewModel.coin.symbol.uppercased())
+                        .font(.headline)
+                    .foregroundStyle(Color.theme.secondaryText)
+
+                    CoinLogoView(isDetailView: true, coin: viewModel.coin)
+                        .frame(width: 25, height: 25)
+                }
+            }
+        }
     }
 }
 
