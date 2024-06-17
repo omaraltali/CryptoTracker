@@ -10,14 +10,90 @@ import SwiftUI
 struct DetailView: View {
 
     @ObservedObject var viewModel: DetailViewModel
+    private let collumns: [GridItem] = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    private let spacing: CGFloat = 30
 
     var body: some View {
-        Text(viewModel.coin.name)
+        ScrollView {
+            VStack(spacing: 20) {
+                Text("")
+                    .frame(height: 150)
+
+                overviewTitle
+                Divider()
+                overViewGrid
+                additionalTitle
+                Divider()
+                additionalGrid
+
+            }
+        }
+        .navigationTitle(viewModel.coin.name)
+    }
+}
+
+extension DetailView {
+
+    private var overviewTitle: some View {
+        Text("Ovewview")
+            .font(.title)
+            .bold()
+            .foregroundStyle(Color.theme.accent)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.leading, 5)
+    }
+
+    private var overViewGrid: some View {
+        LazyVGrid(columns: collumns,
+                  alignment: .leading,
+                  spacing: spacing,
+                  pinnedViews: [],
+                  content: {
+            ForEach(viewModel.overviewStastics) { stat in
+                StatsisticView(stat: stat)
+
+            }
+            .padding(.leading, 5)
+
+        })
+
+    }
+
+    private var additionalTitle: some View {
+        Text("Additional Details")
+            .font(.title)
+            .bold()
+            .foregroundStyle(Color.theme.accent)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.leading, 5)
+
+    }
+
+    private var additionalGrid: some View {
+        LazyVGrid(columns: collumns,
+                  alignment: .leading,
+                  spacing: spacing,
+                  pinnedViews: [],
+                  content: {
+            ForEach(viewModel.additionalStastics) { stat in
+                StatsisticView(stat: stat)
+
+            }
+            .padding(.leading, 5)
+
+        })
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(viewModel: CompositionRoot.createDetailViewModel(for: dev.coin))
+        NavigationView {
+            DetailView(viewModel: CompositionRoot.createDetailViewModel(for: dev.coin))
+        }
     }
 }
+
+
