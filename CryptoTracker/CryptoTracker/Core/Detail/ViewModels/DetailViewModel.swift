@@ -40,7 +40,7 @@ class DetailViewModel: ObservableObject {
 
         coinDetailService.$coinDetails.sink {[weak self] coinDetail in
             guard let self, let coinDetail else {return}
-            self.coinDescription = coinDetail.description?.en
+            self.coinDescription = coinDetail.readableDescription
             self.websiteURL = coinDetail.links?.homepage?.first
             self.redditURL = coinDetail.links?.subredditURL
         }
