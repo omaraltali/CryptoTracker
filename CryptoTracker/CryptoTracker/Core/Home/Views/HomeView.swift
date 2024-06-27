@@ -12,6 +12,7 @@ struct HomeView: View {
     @EnvironmentObject private var viewModel: HomeViewModel
     @State private var showPortfolio: Bool = false
     @State private var showPorfolioSheetView: Bool = false
+    @State private var showSettingsView: Bool = false
 
     var body: some View {
         ZStack {
@@ -41,6 +42,9 @@ struct HomeView: View {
 
                 Spacer(minLength: 0)
             }
+            .sheet(isPresented: $showSettingsView, content: {
+                InfoView(isPresented: $showSettingsView)
+            })
         }
         .navigationDestination(for: CoinModel.self) { coin in
             DetailView(viewModel: CompositionRoot.createDetailViewModel(for: coin))
@@ -67,6 +71,8 @@ extension HomeView {
                 .onTapGesture {
                     if showPortfolio {
                         showPorfolioSheetView.toggle()
+                    } else {
+                        showSettingsView.toggle()
                     }
                 }
                 .background(
