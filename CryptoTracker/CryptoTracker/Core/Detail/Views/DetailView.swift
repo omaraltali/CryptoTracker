@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailView: View {
 
     @ObservedObject var viewModel: DetailViewModel
+    @State private var showFullDescription: Bool = false
     private let collumns: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -23,10 +24,12 @@ struct DetailView: View {
                     .padding(.vertical)
                 overviewTitle
                 Divider()
+                descriptionSection
                 overViewGrid
                 additionalTitle
                 Divider()
                 additionalGrid
+                websiteSection
 
             }
 
@@ -102,6 +105,48 @@ extension DetailView {
             CoinLogoView(isDetailView: true, coin: viewModel.coin)
                 .frame(width: 25, height: 25)
         }
+
+    }
+
+    private var descriptionSection: some View {
+        ZStack {
+            if let coinDescription = viewModel.coinDescription, !coinDescription.isEmpty {
+                VStack(alignment: .leading) {
+                    Text(coinDescription)
+                        .lineLimit(showFullDescription ? nil : 3)
+                        .font(.callout)
+                        .foregroundStyle(Color.theme.secondaryText)
+                    Button(action: {
+                        withAnimation(.easeInOut) {
+                            showFullDescription.toggle()
+                        }
+                    }, label: {
+                        Text(showFullDescription ? "Less" : "Read more..")
+                            .font(.caption)
+                            .fontWeight(.bold)
+                            .padding(.vertical, 4)
+                    })
+                    .foregroundStyle(Color.blue)
+                }.frame(maxWidth: .infinity, alignment: .leading)
+            }
+        }
+    }
+
+    private var websiteSection: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            if let websiteString = viewModel.websiteURL, let url = URL(string: websiteString) {
+                Link("Website", destination: url)
+            }
+
+            if let redditString = viewModel.redditURL,
+               let url = URL(string: redditString) {
+                Link("Reddit", destination: url)
+            }
+        }
+        .padding(.horizontal, 4)
+        .foregroundStyle(Color.blue)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .font(.headline)
 
     }
 }
