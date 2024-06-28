@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailView: View {
 
-    @ObservedObject var viewModel: DetailViewModel
+    @EnvironmentObject var viewModel: DetailViewModel
     @State private var showFullDescription: Bool = false
     private let collumns: [GridItem] = [
         GridItem(.flexible()),
@@ -155,7 +155,8 @@ extension DetailView {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DetailView(viewModel: CompositionRoot.createDetailViewModel(for: dev.coin))
+            DetailView()
+                .environmentObject(CompositionRoot.createDetailViewModel(for: dev.coin))
         }
     }
 }

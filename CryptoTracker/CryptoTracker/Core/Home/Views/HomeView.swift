@@ -53,7 +53,8 @@ struct HomeView: View {
             })
         }
         .navigationDestination(for: CoinModel.self) { coin in
-            DetailView(viewModel: CompositionRoot.createDetailViewModel(for: coin))
+            DetailView()
+                .environmentObject(CompositionRoot.createDetailViewModel(for: coin))
         }
     }
 }
