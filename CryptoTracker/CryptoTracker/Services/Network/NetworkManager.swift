@@ -20,6 +20,7 @@ class NetworkManager: NetworkManagerProtocol {
             }
             .decode(type: T.self, decoder: JSONDecoder())
             .receive(on: RunLoop.main)
+            .retry(3)
             .eraseToAnyPublisher()
     }
 }
