@@ -11,6 +11,7 @@ import SwiftUI
 struct CryptoTrackerApp: App {
 
     @StateObject private var homeViewModel = CompositionRoot.createHomeViewModel()
+    @State private var showLaunchView: Bool = true
 
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color.theme.accent)]
@@ -19,11 +20,22 @@ struct CryptoTrackerApp: App {
 
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                HomeView()
-                    .navigationBarHidden(true)
+            ZStack {
+
+                NavigationStack {
+                    HomeView()
+                        .navigationBarHidden(true)
+                }
+                .environmentObject(homeViewModel)
+
+                ZStack {
+                    if showLaunchView {
+                        FakeLuanchView(showLaunchView: $showLaunchView)
+                            .transition(.move(edge: .leading))
+                    }
+                }
+                .zIndex(2.0)
             }
-            .environmentObject(homeViewModel)
         }
     }
 }

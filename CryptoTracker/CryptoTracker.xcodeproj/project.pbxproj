@@ -28,6 +28,8 @@
 		DF8718B42C12849F00790CBF /* XMarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8718B32C12849F00790CBF /* XMarkButton.swift */; };
 		DF8718B62C12A0E300790CBF /* CoinLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8718B52C12A0E300790CBF /* CoinLogoView.swift */; };
 		DFA473A42C2DDD3F009AB640 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA473A32C2DDD3F009AB640 /* Info.swift */; };
+		DFA473A72C2E120D009AB640 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFA473A62C2E120D009AB640 /* LaunchScreen.storyboard */; };
+		DFA473A92C2E13C4009AB640 /* FakeLuanchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA473A82C2E13C4009AB640 /* FakeLuanchView.swift */; };
 		DFA4DD482C0A6410004DB1D5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA4DD472C0A6410004DB1D5 /* NetworkManager.swift */; };
 		DFA4DD4A2C0A650A004DB1D5 /* NetworkManagerProtcol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA4DD492C0A650A004DB1D5 /* NetworkManagerProtcol.swift */; };
 		DFA4DD4C2C0A6C2F004DB1D5 /* MOCKS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA4DD4B2C0A6C2F004DB1D5 /* MOCKS.swift */; };
@@ -79,6 +81,8 @@
 		DF8718B32C12849F00790CBF /* XMarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMarkButton.swift; sourceTree = "<group>"; };
 		DF8718B52C12A0E300790CBF /* CoinLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinLogoView.swift; sourceTree = "<group>"; };
 		DFA473A32C2DDD3F009AB640 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		DFA473A62C2E120D009AB640 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DFA473A82C2E13C4009AB640 /* FakeLuanchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeLuanchView.swift; sourceTree = "<group>"; };
 		DFA4DD472C0A6410004DB1D5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		DFA4DD492C0A650A004DB1D5 /* NetworkManagerProtcol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtcol.swift; sourceTree = "<group>"; };
 		DFA4DD4B2C0A6C2F004DB1D5 /* MOCKS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOCKS.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 		DF0FC0AC2C017E090077E0E8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				DFA473A52C2E11B3009AB640 /* Launch */,
 				DFA473A22C2DDD1C009AB640 /* Info */,
 				DF0FC0B22C017FC30077E0E8 /* ReusableViewsCompononents */,
 				DF0FC0AD2C017E1E0077E0E8 /* Home */,
@@ -245,6 +250,15 @@
 				DFA473A32C2DDD3F009AB640 /* Info.swift */,
 			);
 			path = Info;
+			sourceTree = "<group>";
+		};
+		DFA473A52C2E11B3009AB640 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				DFA473A62C2E120D009AB640 /* LaunchScreen.storyboard */,
+				DFA473A82C2E13C4009AB640 /* FakeLuanchView.swift */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 		DFA4DD462C0A63F7004DB1D5 /* Services */ = {
@@ -418,6 +432,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFA473A72C2E120D009AB640 /* LaunchScreen.storyboard in Resources */,
 				DFAE53862C01718F003C5D6C /* Preview Assets.xcassets in Resources */,
 				DF0FC0A82C017B670077E0E8 /* Assets.xcassets in Resources */,
 			);
@@ -462,6 +477,7 @@
 				DF0FC0BC2C0227CA0077E0E8 /* CoinRawView.swift in Sources */,
 				DFA4DD592C0AB9C9004DB1D5 /* SearchBarView.swift in Sources */,
 				DF7A5ED12C1FE3EB00455D8D /* ChartView.swift in Sources */,
+				DFA473A92C2E13C4009AB640 /* FakeLuanchView.swift in Sources */,
 				DFA4DD5F2C0ACBB4004DB1D5 /* StatsisticView.swift in Sources */,
 				DFA4DD672C0B7135004DB1D5 /* PortfolioView.swift in Sources */,
 				DFA4DD632C0B5F5A004DB1D5 /* MarketDataModel.swift in Sources */,
@@ -626,6 +642,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -658,6 +675,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
