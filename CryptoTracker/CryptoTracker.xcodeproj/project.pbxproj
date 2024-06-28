@@ -27,7 +27,7 @@
 		DF7A5ED52C26771700455D8D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7A5ED42C26771700455D8D /* String.swift */; };
 		DF8718B42C12849F00790CBF /* XMarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8718B32C12849F00790CBF /* XMarkButton.swift */; };
 		DF8718B62C12A0E300790CBF /* CoinLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8718B52C12A0E300790CBF /* CoinLogoView.swift */; };
-		DFA473A42C2DDD3F009AB640 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA473A32C2DDD3F009AB640 /* Info.swift */; };
+		DFA473A42C2DDD3F009AB640 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA473A32C2DDD3F009AB640 /* InfoView.swift */; };
 		DFA473A72C2E120D009AB640 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFA473A62C2E120D009AB640 /* LaunchScreen.storyboard */; };
 		DFA473A92C2E13C4009AB640 /* FakeLuanchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA473A82C2E13C4009AB640 /* FakeLuanchView.swift */; };
 		DFA4DD482C0A6410004DB1D5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA4DD472C0A6410004DB1D5 /* NetworkManager.swift */; };
@@ -80,7 +80,7 @@
 		DF7A5ED42C26771700455D8D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		DF8718B32C12849F00790CBF /* XMarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMarkButton.swift; sourceTree = "<group>"; };
 		DF8718B52C12A0E300790CBF /* CoinLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinLogoView.swift; sourceTree = "<group>"; };
-		DFA473A32C2DDD3F009AB640 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		DFA473A32C2DDD3F009AB640 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		DFA473A62C2E120D009AB640 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFA473A82C2E13C4009AB640 /* FakeLuanchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeLuanchView.swift; sourceTree = "<group>"; };
 		DFA4DD472C0A6410004DB1D5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -150,8 +150,8 @@
 		DF0FC0AD2C017E1E0077E0E8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				DF0FC0AF2C017E320077E0E8 /* ViewModels */,
 				DF0FC0AE2C017E2C0077E0E8 /* Views */,
+				DF0FC0AF2C017E320077E0E8 /* ViewModels */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -247,7 +247,7 @@
 		DFA473A22C2DDD1C009AB640 /* Info */ = {
 			isa = PBXGroup;
 			children = (
-				DFA473A32C2DDD3F009AB640 /* Info.swift */,
+				DFA473A32C2DDD3F009AB640 /* InfoView.swift */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -473,7 +473,7 @@
 				DF0FC0BE2C02282F0077E0E8 /* PreviewProvider.swift in Sources */,
 				DFE9E10E2C1C886A00278D1C /* PortfolioDataService.swift in Sources */,
 				DFA4DD612C0B5BD6004DB1D5 /* HomeStatsView.swift in Sources */,
-				DFA473A42C2DDD3F009AB640 /* Info.swift in Sources */,
+				DFA473A42C2DDD3F009AB640 /* InfoView.swift in Sources */,
 				DF0FC0BC2C0227CA0077E0E8 /* CoinRawView.swift in Sources */,
 				DFA4DD592C0AB9C9004DB1D5 /* SearchBarView.swift in Sources */,
 				DF7A5ED12C1FE3EB00455D8D /* ChartView.swift in Sources */,

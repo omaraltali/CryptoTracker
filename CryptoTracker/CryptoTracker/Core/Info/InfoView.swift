@@ -22,8 +22,11 @@ struct InfoView: View {
         NavigationView {
             List {
                 developerSection
+                    .listRowBackground(Color.theme.background.opacity(0.5))
                 swiftfulThinkingSection
+                    .listRowBackground(Color.theme.background.opacity(0.5))
                 coinGeckoSection
+                    .listRowBackground(Color.theme.background.opacity(0.5))
 
             }
             .listStyle(.grouped)

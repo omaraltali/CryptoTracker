@@ -130,6 +130,7 @@ extension HomeView {
                 .background(
                     CoinRawView(coin: coin, showHoldingsColoumn: false)
                         .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+                        .listRowBackground(Color.theme.background)
                 )
             }
         }
@@ -145,6 +146,7 @@ extension HomeView {
             ForEach(viewModel.portfolioCoins) { coin in
                 CoinRawView(coin: coin, showHoldingsColoumn: true)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+                    .listRowBackground(Color.theme.background)
             }
         }
         .listStyle(.plain)
