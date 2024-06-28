@@ -10,6 +10,10 @@ import Combine
 
 class NetworkManager: NetworkManagerProtocol {
 
+    static let shared = NetworkManager()
+
+    private init () {}
+
     func fetchData<T: Decodable>(from url: URL, type: T.Type) -> AnyPublisher<T, Error> {
         return URLSession.shared.dataTaskPublisher(for: url)
             .tryMap { (data, response) in

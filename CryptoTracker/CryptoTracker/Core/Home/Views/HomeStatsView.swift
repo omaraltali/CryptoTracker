@@ -26,5 +26,5 @@ struct HomeStatsView: View {
 
 #Preview {
     HomeStatsView(showPortfolio: .constant(false))
-        .environmentObject(HomeViewModel(dataService: CoinDataService(networkManager: NetworkManager()), marketDataService: MarketDataService(networkManager: NetworkManager()), portfolioDataService: PortfolioDataService()))
+        .environmentObject(HomeViewModel(dataService: CoinDataService(networkManager: NetworkManager.shared), marketDataService: MarketDataService(networkManager: NetworkManager.shared), portfolioDataService: PortfolioDataService()))
 }
