@@ -32,7 +32,7 @@ final class CoinDataServiceTests: XCTestCase {
         let dataService = makeSUT(fetchDataResult: fetchDataResult)
 
         let expectation = XCTestExpectation(description: "All coins are published")
-        dataService.$allCoins
+        dataService.fetchCoins()
             .sink { receivedCoins in
                 XCTAssertEqual(receivedCoins.count, 1)
                 XCTAssertEqual(receivedCoins.first?.name, "Bitcoin")
@@ -50,7 +50,7 @@ final class CoinDataServiceTests: XCTestCase {
         let dataService = makeSUT(fetchDataResult: fetchDataResult)
 
         let expectation = XCTestExpectation(description: "Error is handled")
-        dataService.$allCoins
+        dataService.fetchCoins()
             .sink { receivedCoins in
                 XCTAssertTrue(receivedCoins.isEmpty)
                 expectation.fulfill()

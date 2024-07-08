@@ -211,9 +211,11 @@
 		DF0FC0C32C02515B0077E0E8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				DFE9E1092C1C7BE600278D1C /* CoreData */,
+				DF0FC0C42C0251860077E0E8 /* CoinDataService.swift */,
+				DFA4DD642C0B6059004DB1D5 /* MarketDataService.swift */,
+				DFE9E10D2C1C886A00278D1C /* PortfolioDataService.swift */,
+				DF7A5ECE2C1E922300455D8D /* CoinDetailDataService.swift */,
 				DFE9E1082C1C7AEF00278D1C /* Network */,
-				DFA4DD462C0A63F7004DB1D5 /* Services */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -259,17 +261,6 @@
 				DFA473A82C2E13C4009AB640 /* FakeLuanchView.swift */,
 			);
 			path = Launch;
-			sourceTree = "<group>";
-		};
-		DFA4DD462C0A63F7004DB1D5 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				DF0FC0C42C0251860077E0E8 /* CoinDataService.swift */,
-				DFA4DD642C0B6059004DB1D5 /* MarketDataService.swift */,
-				DFE9E10D2C1C886A00278D1C /* PortfolioDataService.swift */,
-				DF7A5ECE2C1E922300455D8D /* CoinDetailDataService.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		DFA4DD552C0AACEE004DB1D5 /* Frameworks */ = {
@@ -336,13 +327,6 @@
 				DFA4DD492C0A650A004DB1D5 /* NetworkManagerProtcol.swift */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		DFE9E1092C1C7BE600278D1C /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

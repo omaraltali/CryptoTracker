@@ -17,11 +17,11 @@ class HomeViewModel: ObservableObject {
     @Published var searchText: String = ""
     private var cancellables: Set<AnyCancellable> = []
 
-    private let coinDataService: CoinDataService
+    private let coinDataService: CoinDataServiceProtocol
     private let marketDataService: MarketDataService
     private let portfolioDataService: PortfolioDataService
 
-    init(dataService: CoinDataService, marketDataService: MarketDataService, portfolioDataService: PortfolioDataService) {
+    init(dataService: CoinDataServiceProtocol, marketDataService: MarketDataService, portfolioDataService: PortfolioDataService) {
         self.coinDataService = dataService
         self.marketDataService = marketDataService
         self.portfolioDataService = portfolioDataService
@@ -29,22 +29,11 @@ class HomeViewModel: ObservableObject {
     }
 
     func addSubscribers() {
-
-        // MARK: Combine POWER
-        // we get rid of this first subscribing since we combined sinking on $searchText and dataService.$allCoins
-//        dataService.$allCoins
-//            .sink { [weak self] receivedCoins in
-//                self?.allCoins = receivedCoins
-//            }
-//            .store(in: &cancellables)
-
-        // Subscribe to seachText :
-        // and make the searchText also subscribe to data service $allCoins using combineLatest
         $searchText
-            .combineLatest(coinDataService.$allCoins)
+            .combineLatest(coinDataService.fetchCoins())
             .debounce(for: .milliseconds(300), scheduler: RunLoop.main)
             .map(filterCoins)
-            .sink {[weak self] filteredCoinsReturned in
+            .sink { [weak self] filteredCoinsReturned in
                 self?.allCoins = filteredCoinsReturned
             }
             .store(in: &cancellables)
@@ -52,19 +41,18 @@ class HomeViewModel: ObservableObject {
         $allCoins
             .combineLatest(portfolioDataService.$savedEntites)
             .map(mapAllCoinsToPortoflioCoins)
-            .sink {[weak self] returnedCoins  in
+            .sink { [weak self] returnedCoins in
                 self?.portfolioCoins = returnedCoins
             }
             .store(in: &cancellables)
 
-
         marketDataService.$marketData
             .combineLatest($portfolioCoins)
             .map(mapMarketDataToStatistics)
-        .sink {[weak self] arrayOfStats in
-            self?.statistics = arrayOfStats
-        }
-        .store(in: &cancellables)
+            .sink { [weak self] arrayOfStats in
+                self?.statistics = arrayOfStats
+            }
+            .store(in: &cancellables)
     }
 
     func updatePortfolio(coin: CoinModel, amount: Double) {
@@ -99,22 +87,21 @@ class HomeViewModel: ObservableObject {
         let previousValue = portfolioCoins.map { coin -> Double in
             let currentValue = coin.currentHoldingsValue
             let percentChange = (coin.priceChangePercentage24H ?? 0) / 100
-            let previusValue = currentValue / (1 + percentChange)
-            return previusValue
+            let previousValue = currentValue / (1 + percentChange)
+            return previousValue
         }
             .reduce(0, +)
 
         let percentageChange = ((portfolioValue - previousValue) / previousValue)
 
-        let portfolio = StatisticModel(title: "Portfolio Value", value: portfolioValue.asCurrencyWith2Decimals() , percentageChange: percentageChange)
+        let portfolio = StatisticModel(title: "Portfolio Value", value: portfolioValue.asCurrencyWith2Decimals(), percentageChange: percentageChange)
 
         return [marketCap, volume, btcDominance, portfolio]
     }
 
-
-    private func mapAllCoinsToPortoflioCoins(allCoins: [CoinModel], portfolioEntites: [Portfolio]) -> [CoinModel] {
+    private func mapAllCoinsToPortoflioCoins(allCoins: [CoinModel], portfolioEntities: [Portfolio]) -> [CoinModel] {
         allCoins.compactMap { coin -> CoinModel? in
-            guard let entity = portfolioEntites.first(where: {$0.coinID == coin.id}) else {
+            guard let entity = portfolioEntities.first(where: { $0.coinID == coin.id }) else {
                 return nil
             }
             return coin.updateHoldings(amount: entity.amount)
@@ -122,11 +109,8 @@ class HomeViewModel: ObservableObject {
     }
 
     func reloadData() {
-        coinDataService.getCoins()
+        coinDataService.fetchCoins()
+            .assign(to: &$allCoins)
         marketDataService.getMarketData()
     }
-
-
-
-
 }
