@@ -27,6 +27,8 @@ struct InfoView: View {
                     .listRowBackground(Color.theme.background.opacity(0.5))
                 coinGeckoSection
                     .listRowBackground(Color.theme.background.opacity(0.5))
+                essentialLeadSection
+                    .listRowBackground(Color.theme.background.opacity(0.5))
 
             }
             .listStyle(.grouped)
@@ -63,8 +65,10 @@ extension InfoView {
             .padding()
             Link("Subscribe on Youtube 🫡",destination: youtubeURL)
                 .foregroundStyle(Color.blue)
+                .padding(.leading)
             Link("Support his coffe addiction ☕️", destination: coffeURL)
                 .foregroundStyle(Color.blue)
+                .padding(.leading)
         } header: {
             Text("Swiftful Thinking")
         }
@@ -95,9 +99,9 @@ extension InfoView {
     private var developerSection: some View {
         Section {
             VStack(alignment: .leading) {
-                Image("logo")
+                Image("me")
                     .resizable()
-                    .frame(width: 100, height: 100)
+                    .frame(width: 150, height: 150)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                 Text("This app was developed by Omar Altali. It uses SwiftUI and is written ...... the project benfits from multi-threading, publishers/subscribers and data persitance")
                     .font(.callout)
@@ -105,11 +109,34 @@ extension InfoView {
                     .foregroundStyle(Color.theme.accent)
             }
             .padding()
-            Link("Visit CoinGecko 🤙🏻",destination: youtubeURL)
+            Link("Visit Linkedin 🤓",destination: youtubeURL)
                 .foregroundStyle(Color.blue)
+                .padding(.leading)
         } header: {
             Text("Developer")
         }
     }
+
+    private var essentialLeadSection: some View {
+        Section {
+            VStack(alignment: .leading) {
+                Image("leadLogo")
+                    .resizable()
+                    .frame(height: 150)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                Text("This app was developed by Omar Altali. It uses SwiftUI and is written ...... the project benfits from multi-threading, publishers/subscribers and data persitance")
+                    .font(.callout)
+                    .fontWeight(.medium)
+                    .foregroundStyle(Color.theme.accent)
+            }
+            .padding()
+            Link("Visit Linkedin 🤓",destination: youtubeURL)
+                .foregroundStyle(Color.blue)
+                .padding(.leading)
+        } header: {
+            Text("Developer")
+        }
+    }
+
 }
 
