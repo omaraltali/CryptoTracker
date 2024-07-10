@@ -1,9 +1,14 @@
-
+# Xcode
 .DS_Store
-CryptoTracker/CryptoTracker.xcodeproj/project.xcworkspace/xcuserdata/omaraltali.xcuserdatad/UserInterfaceState.xcuserstate
+build/
+DerivedData/
 *.xcuserstate
-CryptoTracker/CryptoTracker.xcodeproj/project.xcworkspace/xcuserdata/omaraltali.xcuserdatad/UserInterfaceState.xcuserstate
-/CryptoTracker/CryptoTracker.xcodeproj/project.xcworkspace/xcuserdata
-*.xcuserstate
-CryptoTracker/CryptoTracker.xcodeproj/project.xcworkspace/xcuserdata/omaraltali.xcuserdatad/UserInterfaceState.xcuserstate
-/CryptoTracker/CryptoTracker.xcodeproj/project.xcworkspace/xcuserdata/omaraltali.xcuserdatad
+xcuserdata/
+
+# Swift Package Manager
+.build/
+Packages/
+Package.resolved
+
+# CocoaPods
+Pods/
